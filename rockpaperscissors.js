@@ -5,6 +5,17 @@ let computerScore = 0;
 //console.log(playRound(playerSelection, computerSelection));
 console.log(game());
 
+function getComputerChoice(){
+    const choices = ['rock', 'paper', 'scissors'];
+    const randomNumber = Math.floor(Math.random() * 3);
+    return choices[randomNumber];
+}
+
+function getPlayerChoice(){
+    const playerChoice = prompt('Please input your choice. [Rock, Paper, Scissors]').toLowerCase();
+    return playerChoice;
+}
+
 function playRound(){
     let log = '';
     let playerSelection = getPlayerChoice();
@@ -29,20 +40,6 @@ function playRound(){
         return log = 'Draw';
     }
 }
-
-function getComputerChoice(){
-    const choices = ['rock', 'paper', 'scissors'];
-    const randomNumber = Math.floor(Math.random() * 3);
-    return choices[randomNumber];
-}
-
-function getPlayerChoice(){
-    const playerChoice = prompt('Please input your choice. [Rock, Paper, Scissors]').toLowerCase();
-    return playerChoice;
-}
-
-
-//console.log(getPlayerChoice());
 
 function game(){
 
